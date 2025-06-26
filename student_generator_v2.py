@@ -54,7 +54,7 @@ def load_students() ->list[Student]:
             # make sure info is correct by making sure they're numbers
             int(info[3])
             float(info[4])
-            int(info[5])
+            (info[5])
         except:
             # if not, write an error message to the error log
             # and continue down the file
@@ -62,7 +62,7 @@ def load_students() ->list[Student]:
             continue
         
         # student is equal to the the parts of information in the line of the file, that align with Student class objects
-        student = Student(info[0], info[1], info[2], int(info[3]), float(info[4]), int(info[5]))
+        student = Student(info[0], info[1], info[2], int(info[3]), float(info[4]), (info[5]))
         # add the student to the list_of_students
         list_of_students.append(student)
         # print the data for each student in list_of_students
@@ -107,18 +107,5 @@ def get_student_dictionaries():
 
     # get a list of student dictionaries
     student_dictionaries = student_to_dictionary(student_list)
-
-    for student_dict in student_dictionaries:
-        print(student_dict)
     
     return student_dictionaries
-
-
-
-
-
-
-
-
-
-get_student_dictionaries()
