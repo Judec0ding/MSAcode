@@ -6,7 +6,7 @@ class Student():
         self.__major = major
         self.__credit_hours = credit_hours
         self.__gpa = gpa
-        self.__id_number = id_number
+        self.__id_number = id_number.strip()
 
 
     #set and get methods for the class to either set a new value or obtain a value    
